@@ -11,7 +11,7 @@ Build the project with `just` (needs to be installed):
 just build
 ```
 
-And run a test (`$TEST_NAME` is one of Addition, Subtraction, Multiplication, Division, Sin, Pow, Log):
+And run a test (`$TEST_NAME` is one of Addition, Subtraction, Multiplication, Division, Sin, Pow, Log, and AdditionAllocation):
 
 ```bash
 just run $TEST_NAME
