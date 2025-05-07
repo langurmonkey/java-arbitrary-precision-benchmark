@@ -15,8 +15,7 @@ public class Sin extends BaseBenchmark {
   @Benchmark
   public void testBigDecimalSin(BenchmarkState state, Blackhole bh) {
     for (int i = 0; i < ITERATIONS; i++) {
-      var aBD = new BigDecimal("12345.6789012345678901234567890123456789", state.mc);
-      var result = BigDecimalMath.sin(aBD, state.mc);
+      var result = BigDecimalMath.sin(state.aBD, state.mc);
       bh.consume(result);
     }
   }
@@ -24,10 +23,8 @@ public class Sin extends BaseBenchmark {
   @Benchmark
   public void testApfloatSin(BenchmarkState state, Blackhole bh) {
     for (int i = 0; i < ITERATIONS; i++) {
-      var aBD = new Apfloat("12345.6789012345678901234567890123456789", state.precision);
-      var result = ApfloatMath.sin(aBD);
+      var result = ApfloatMath.sin(state.aAF);
       bh.consume(result);
     }
   }
-
 }

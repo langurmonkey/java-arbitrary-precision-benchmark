@@ -15,9 +15,7 @@ public class Multiplication extends BaseBenchmark {
   @Benchmark
   public void testBigDecimalMultiplication(BenchmarkState state, Blackhole bh) {
     for (int i = 0; i < ITERATIONS; i++) {
-      var aBD = new BigDecimal("12345.6789012345678901234567890123456789", state.mc);
-      var bBD = new BigDecimal("98765.4321098765432109876543210987654321", state.mc);
-      var result = aBD.multiply(bBD);
+      var result = state.aBD.multiply(state.bBD);
       bh.consume(result);
     }
   }
@@ -25,9 +23,7 @@ public class Multiplication extends BaseBenchmark {
   @Benchmark
   public void testApFloatMultiplication(BenchmarkState state, Blackhole bh) {
     for (int i = 0; i < ITERATIONS; i++) {
-      var aAF = new Apfloat("12345.6789012345678901234567890123456789", state.precision);
-      var bAF = new Apfloat("98765.4321098765432109876543210987654321", state.precision);
-      var result = aAF.multiply(bAF);
+      var result = state.aAF.multiply(state.bAF);
       bh.consume(result);
     }
   }

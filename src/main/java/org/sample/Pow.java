@@ -15,8 +15,7 @@ public class Pow extends BaseBenchmark {
   @Benchmark
   public void testBigDecimalPow(BenchmarkState state, Blackhole bh) {
     for (int i = 0; i < ITERATIONS; i++) {
-      var aBD = new BigDecimal("12345.6789012345678901234567890123456789", state.mc);
-      var result = BigDecimalMath.pow(aBD, 4L, state.mc);
+      var result = BigDecimalMath.pow(state.aBD, 4L, state.mc);
       bh.consume(result);
     }
   }
@@ -24,8 +23,7 @@ public class Pow extends BaseBenchmark {
   @Benchmark
   public void testApfloatPow(BenchmarkState state, Blackhole bh) {
     for (int i = 0; i < ITERATIONS; i++) {
-      var aBD = new Apfloat("12345.6789012345678901234567890123456789", state.precision);
-      var result = ApfloatMath.pow(aBD, 4L);
+      var result = ApfloatMath.pow(state.aAF, 4L);
       bh.consume(result);
     }
   }
