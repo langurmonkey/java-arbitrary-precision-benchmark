@@ -5,14 +5,14 @@ This repository contains a JMH benchmark to test the performance of the arbitrar
 
 See the blog post [Benchmarking ApFloat vs BigDecimal](https://tonisagrista.com/blog/2025/apfloat-bigdecimal).
 
-Build the project:
+Build the project with `just` (needs to be installed):
 
 ```bash
-mvn clean verify
+just build
 ```
 
-Run it:
+And run a test (`$TEST_NAME` is one of Addition, Subtraction, Multiplication, Division, Sin, Pow, Log):
 
 ```bash
-java -jar target/benchmarks.jar PrecisionBenchmark
+just run $TEST_NAME
 ```
