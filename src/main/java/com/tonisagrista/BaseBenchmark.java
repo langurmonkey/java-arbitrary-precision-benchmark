@@ -1,5 +1,4 @@
-
-package org.sample;
+package com.tonisagrista;
 
 import org.openjdk.jmh.annotations.*;
 

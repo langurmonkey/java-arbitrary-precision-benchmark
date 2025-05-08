@@ -1,14 +1,7 @@
-package org.sample;
+package com.tonisagrista;
 
-import org.apfloat.Apfloat;
-import org.apfloat.ApfloatMath;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
-
-import java.math.BigDecimal;
-import java.math.MathContext;
-import java.util.concurrent.TimeUnit;
-import ch.obermuhlner.math.big.*;
 
 public class Multiplication extends BaseBenchmark {
 
