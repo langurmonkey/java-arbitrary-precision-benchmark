@@ -1,5 +1,5 @@
-JMH `Apfloat` vs `BigDecimal`
-=============================
+Apfloat vs BigDecimal Benchmark
+===============================
 
 This repository contains a battery of JMH benchmarks to assess the performance of the arbitrary-precision floating-point libraries [Apfloat](http://www.apfloat.org) and [BigDecimal](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/math/BigDecimal.html).
 
