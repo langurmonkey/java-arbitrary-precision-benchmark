@@ -19,3 +19,9 @@ just run $TEST_NAME
 `$TEST_NAME` is one of **Addition**, **Subtraction**, **Multiplication**, **Division**, **Sin**, **Pow**, **Log**, or **Allocation**.
 
 This writes a report in JSON format in `results/jmh-result-$TEST_NAME.json`.
+
+You can plot the results from the generated JSON files with the provided `plotter.py` utility. Just pass in the name of the test.
+
+```bash
+python plotter.py $TEST_NAME
+```
