@@ -11,8 +11,9 @@ Build the project with [`just`](https://github.com/casey/just):
 just build
 ```
 
-And run a test (`$TEST_NAME` is one of **Addition**, **Subtraction**, **Multiplication**, **Division**, **Sin**, **Pow**, **Log**, and **AdditionAllocation**):
+Run a test with: 
 
 ```bash
 just run $TEST_NAME
 ```
+`$TEST_NAME` is one of **Addition**, **Subtraction**, **Multiplication**, **Division**, **Sin**, **Pow**, **Log**, or **AdditionAllocation**.
