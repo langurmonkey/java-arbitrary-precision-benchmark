@@ -10,11 +10,11 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Fork(value = 1)
-@Warmup(iterations = 2, time = 2)
-@Measurement(iterations = 2, time = 2)
+@Warmup(iterations = 1, time = 1)
+@Measurement(iterations = 3, time = 2)
 public abstract class BaseBenchmark {
 
-  protected static final int ITERATIONS = 200;
+  protected static final int ITERATIONS = 500;
 
   @State(Scope.Thread)
   public static class BenchmarkState {
@@ -22,7 +22,7 @@ public abstract class BaseBenchmark {
     BigDecimal aBD, bBD;
     Apfloat aAF, bAF;
 
-    @Param({ "25", "1000" }) // Add different precision levels here
+    @Param({ "25", "50", "500", "1000" }) // Add different precision levels here
     int precision;
 
     @Setup(Level.Trial)

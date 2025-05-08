@@ -6,7 +6,7 @@ import org.openjdk.jmh.infra.Blackhole;
 
 import java.math.BigDecimal;
 
-public class AdditionAllocation extends BaseBenchmark {
+public class Allocation extends BaseBenchmark {
 
   @Benchmark
   public void testBigDecimalAdditionAlloc(BenchmarkState state, Blackhole bh) {

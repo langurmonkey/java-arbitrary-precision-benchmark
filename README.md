@@ -16,4 +16,6 @@ Run a test with:
 ```bash
 just run $TEST_NAME
 ```
-`$TEST_NAME` is one of **Addition**, **Subtraction**, **Multiplication**, **Division**, **Sin**, **Pow**, **Log**, or **AdditionAllocation**.
+`$TEST_NAME` is one of **Addition**, **Subtraction**, **Multiplication**, **Division**, **Sin**, **Pow**, **Log**, or **Allocation**.
+
+This writes a report in JSON format in `results/jmh-result-$TEST_NAME.json`.
