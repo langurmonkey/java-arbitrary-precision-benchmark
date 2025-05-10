@@ -150,4 +150,28 @@ public class ThreeWay {
         bh.consume(aQ);
         bh.consume(bQ);
     }
+
+    @Benchmark
+    public void TWAllocationDoubleBigDecimal(BenchmarkState state, Blackhole bh) {
+        var aBD = new BigDecimal(12345.67890123456789012, state.mc);
+        var bBD = new BigDecimal(98765.43210987654321098, state.mc);
+        bh.consume(aBD);
+        bh.consume(bBD);
+    }
+
+    @Benchmark
+    public void TWAllocationDoubleApfloat(BenchmarkState state, Blackhole bh) {
+        var aAF = new Apfloat(12345.67890123456789012, state.precision);
+        var bAF = new Apfloat(98765.43210987654321098, state.precision);
+        bh.consume(aAF);
+        bh.consume(bAF);
+    }
+
+    @Benchmark
+    public void TWAllocationDoubleQuadruple(BenchmarkState state, Blackhole bh) {
+        var aQ = new Quadruple(12345.67890123456789012);
+        var bQ = new Quadruple(98765.43210987654321098);
+        bh.consume(aQ);
+        bh.consume(bQ);
+    }
 }

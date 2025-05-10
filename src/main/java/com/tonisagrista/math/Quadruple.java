@@ -2093,10 +2093,10 @@ public class Quadruple extends Number implements Comparable<Quadruple> {
     } // Just to put a visible mark of the section in the outline view of the IDE
 
     // The fields containing the value of the instance
-    private boolean negative;
-    private int exponent;
-    private long mantHi;
-    private long mantLo;
+    private transient boolean negative;
+    private transient int exponent;
+    private transient long mantHi;
+    private transient long mantLo;
 
     private static final char[] ZEROS = "0000000000000000000000000000000000000000".toCharArray(); // 40 zeros
 
