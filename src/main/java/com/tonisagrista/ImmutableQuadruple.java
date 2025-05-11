@@ -1,14 +1,10 @@
 package com.tonisagrista;
 
-import ch.obermuhlner.math.big.BigDecimalMath;
 import com.tonisagrista.math.Float128;
 import com.tonisagrista.math.Quadruple;
-import org.apfloat.Apfloat;
-import org.apfloat.ApfloatMath;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
-import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.concurrent.TimeUnit;
 
