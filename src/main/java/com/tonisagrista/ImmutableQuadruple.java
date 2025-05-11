@@ -49,4 +49,40 @@ public class ImmutableQuadruple {
         var result = state.aF.add(state.bF);
         bh.consume(result);
     }
+
+    @Benchmark
+    public void ImmSubtractionQuadruple(BenchmarkState state, Blackhole bh) {
+        var result = state.aQ.subtract(state.bQ);
+        bh.consume(result);
+    }
+
+    @Benchmark
+    public void ImmSubtractionFloat128(BenchmarkState state, Blackhole bh) {
+        var result = state.aF.subtract(state.bF);
+        bh.consume(result);
+    }
+
+    @Benchmark
+    public void ImmMultiplicationQuadruple(BenchmarkState state, Blackhole bh) {
+        var result = state.aQ.multiply(state.bQ);
+        bh.consume(result);
+    }
+
+    @Benchmark
+    public void ImmMultiplicationFloat128(BenchmarkState state, Blackhole bh) {
+        var result = state.aF.multiply(state.bF);
+        bh.consume(result);
+    }
+
+    @Benchmark
+    public void ImmDivisionQuadruple(BenchmarkState state, Blackhole bh) {
+        var result = state.aQ.divide(state.bQ);
+        bh.consume(result);
+    }
+
+    @Benchmark
+    public void ImmDivisionFloat128(BenchmarkState state, Blackhole bh) {
+        var result = state.aF.divide(state.bF);
+        bh.consume(result);
+    }
 }
