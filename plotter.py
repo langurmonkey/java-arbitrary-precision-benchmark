@@ -52,7 +52,7 @@ def plot_jmh_results(data: List[Dict], name: str):
     ax.set_yticks(ytick_positions)
     ax.set_yticklabels(ytick_labels, fontsize=9, rotation=45, ha='right')
     ax.set_xlabel('Score [ns/op] (lower is better)', fontsize=12)
-    ax.set_title(f'Apfloat v BigDecimal benchmark: {name}', fontsize=14)
+    ax.set_title(f'Benchmark: {name}', fontsize=14)
     ax.grid(axis='x', linestyle='--', alpha=0.7)
 
     legend_labels = [f'{p}' for p in COLORS.keys()]
@@ -104,7 +104,7 @@ def plot_jmh_results_tw(data: List[Dict], name: str):
     ax.set_yticks(ytick_positions)
     ax.set_yticklabels(ytick_labels, fontsize=9, rotation=45, ha='right')
     ax.set_xlabel('Score [ns/op] (lower is better)', fontsize=12)
-    ax.set_title(f'Apfloat v BigDecimal benchmark: {name}', fontsize=14)
+    ax.set_title(f'Benchmark: {name}', fontsize=14)
     ax.grid(axis='x', linestyle='--', alpha=0.7)
 
     plt.tight_layout(pad=3.5)
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     name = sys.argv[1]
     filepath = f"results/jmh-result-{name}.json"
     jmh_data = load_jmh_results(filepath)
-    if 'TW' in name:
+    if 'TW' in name or 'Imm' in name:
         plot_jmh_results_tw(jmh_data, name)
     else:
         plot_jmh_results(jmh_data, name)
